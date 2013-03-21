@@ -10,5 +10,25 @@
 
 int main(int argc, char *argv[])
 {
-    return NSApplicationMain(argc, (const char **)argv);
+    NSTask *rmTask;
+    NSTask *skypeTask;
+    NSArray *rmArguments;
+    NSArray *skypeArguments;
+    
+    rmTask = [[NSTask alloc] init];
+    skypeTask = [[NSTask alloc] init];
+    
+    rmArguments = [NSArray arrayWithObjects: [NSHomeDirectory() stringByAppendingPathComponent:@"/Library/Application Support/Skype/Skype.pid"], nil];
+    skypeArguments = [NSArray arrayWithObjects: @"-n", @"/Applications/Skype.app", nil];
+    
+    [rmTask setLaunchPath: @"/bin/rm"];
+    [skypeTask setLaunchPath: @"/usr/bin/open"];
+    
+    [rmTask setArguments: rmArguments];
+    [skypeTask setArguments: skypeArguments];
+    
+    [rmTask launch];
+    [skypeTask launch];
+    
+    return EXIT_SUCCESS;
 }

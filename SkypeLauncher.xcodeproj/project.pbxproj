@@ -11,8 +11,7 @@
 		4398813016FB1FE20084EFCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4398812E16FB1FE20084EFCD /* InfoPlist.strings */; };
 		4398813216FB1FE20084EFCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4398813116FB1FE20084EFCD /* main.m */; };
 		4398813616FB1FE20084EFCD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4398813416FB1FE20084EFCD /* Credits.rtf */; };
-		4398813916FB1FE20084EFCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4398813816FB1FE20084EFCD /* AppDelegate.m */; };
-		4398813C16FB1FE20084EFCD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4398813A16FB1FE20084EFCD /* MainMenu.xib */; };
+		4398814316FB28C00084EFCD /* SkypeBlueLeopard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4398814216FB28C00084EFCD /* SkypeBlueLeopard.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +25,7 @@
 		4398813116FB1FE20084EFCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4398813316FB1FE20084EFCD /* SkypeLauncher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkypeLauncher-Prefix.pch"; sourceTree = "<group>"; };
 		4398813516FB1FE20084EFCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		4398813716FB1FE20084EFCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4398813816FB1FE20084EFCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4398813B16FB1FE20084EFCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4398814216FB28C00084EFCD /* SkypeBlueLeopard.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SkypeBlueLeopard.icns; path = ../SkypeBlueLeopard.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +79,7 @@
 		4398812B16FB1FE20084EFCD /* SkypeLauncher */ = {
 			isa = PBXGroup;
 			children = (
-				4398813716FB1FE20084EFCD /* AppDelegate.h */,
-				4398813816FB1FE20084EFCD /* AppDelegate.m */,
-				4398813A16FB1FE20084EFCD /* MainMenu.xib */,
+				4398813116FB1FE20084EFCD /* main.m */,
 				4398812C16FB1FE20084EFCD /* Supporting Files */,
 			);
 			path = SkypeLauncher;
@@ -93,9 +88,9 @@
 		4398812C16FB1FE20084EFCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4398814216FB28C00084EFCD /* SkypeBlueLeopard.icns */,
 				4398812D16FB1FE20084EFCD /* SkypeLauncher-Info.plist */,
 				4398812E16FB1FE20084EFCD /* InfoPlist.strings */,
-				4398813116FB1FE20084EFCD /* main.m */,
 				4398813316FB1FE20084EFCD /* SkypeLauncher-Prefix.pch */,
 				4398813416FB1FE20084EFCD /* Credits.rtf */,
 			);
@@ -155,7 +150,7 @@
 			files = (
 				4398813016FB1FE20084EFCD /* InfoPlist.strings in Resources */,
 				4398813616FB1FE20084EFCD /* Credits.rtf in Resources */,
-				4398813C16FB1FE20084EFCD /* MainMenu.xib in Resources */,
+				4398814316FB28C00084EFCD /* SkypeBlueLeopard.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4398813216FB1FE20084EFCD /* main.m in Sources */,
-				4398813916FB1FE20084EFCD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +182,6 @@
 				4398813516FB1FE20084EFCD /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		4398813A16FB1FE20084EFCD /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4398813B16FB1FE20084EFCD /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -267,6 +253,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SkypeLauncher/SkypeLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SkypeLauncher/SkypeLauncher-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,6 +266,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SkypeLauncher/SkypeLauncher-Prefix.pch";
 				INFOPLIST_FILE = "SkypeLauncher/SkypeLauncher-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
